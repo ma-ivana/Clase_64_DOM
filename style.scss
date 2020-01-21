@@ -1,0 +1,131 @@
+body {
+    background-color: white;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  nav {
+    background-color: #1A75BC;
+    padding: 20px;
+    padding-bottom: 20px;
+    color: white;
+    height: 80px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+        h3 {
+            color: white;
+        }
+    }
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 15px;
+    .contenedortexto {
+        width: 70%;
+        height: 350px;
+        background-color: rgb(245, 217, 60);
+        display: flex;
+      
+        .texto {
+            width: 55%;
+            padding: 3%;
+            h1 {
+                color: #1A75BC;
+              }
+              h5 {
+                color: grey;
+              }
+              p {
+                color: black;
+                font-size: 16px;
+              }
+        }
+    
+        .imagen {
+        width: 45%;
+        background-image: url("img/gatito10.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+          // img {
+          //   width: 100%;
+          //   height: auto;
+          // }
+        }
+    }
+  }
+
+.containerTarjetas {
+  max-width: 65%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+
+    .card {
+      
+      width: 47%;
+      display: flex;
+      align-items: center;
+      margin: 1%;
+
+      .textoCh {
+       width: 45%;
+       background-color:#1A75BC;
+       text-align: center;
+       box-sizing: content-box;
+       padding: 2%;
+       color: white;
+
+          .parrCh {
+          font-size: 12px;
+          }
+      }
+
+      .imagenCh {
+        width: 40%;
+        height: auto;
+
+        img {
+        width: 100%;
+        }
+      }
+}
+}
+
+  // .container {
+  //   display: flex;
+  // }
+  // .card {
+  //   width: 300px;
+  //   height: 450px;
+  //   background-color: white;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   margin: 1%;
+  //   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  //   padding: 15px;
+  // }
+  // .imagen {
+  //   max-width: 150px;
+  // }
+  // .imagen .img {
+  //   width: 100%;
+  //   height: auto;
+  // }
+  // h4 {
+  //   color: rgb(65, 64, 64);
+  //   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  // }
+  // .info p, .info h4 {
+  //   text-align: center
+  // }
+  // .colorHeart {
+  // color: rgb(141, 23, 141);
+  // }

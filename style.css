@@ -1,0 +1,120 @@
+body {
+  background-color: white;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+  background-color: #1A75BC;
+  padding: 20px;
+  padding-bottom: 20px;
+  color: white;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav div h3 {
+  color: white;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+section .contenedortexto {
+  width: 70%;
+  height: 350px;
+  background-color: #f5d93c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .contenedortexto .texto {
+  width: 55%;
+  padding: 3%;
+}
+
+section .contenedortexto .texto h1 {
+  color: #1A75BC;
+}
+
+section .contenedortexto .texto h5 {
+  color: grey;
+}
+
+section .contenedortexto .texto p {
+  color: black;
+  font-size: 16px;
+}
+
+section .contenedortexto .imagen {
+  width: 45%;
+  background-image: url("img/gatito10.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.containerTarjetas {
+  max-width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.containerTarjetas .card {
+  width: 47%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1%;
+}
+
+.containerTarjetas .card .textoCh {
+  width: 45%;
+  background-color: #1A75BC;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 2%;
+  color: white;
+}
+
+.containerTarjetas .card .textoCh .parrCh {
+  font-size: 12px;
+}
+
+.containerTarjetas .card .imagenCh {
+  width: 40%;
+  height: auto;
+}
+
+.containerTarjetas .card .imagenCh img {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
