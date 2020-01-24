@@ -90,13 +90,40 @@ body .formulario {
 
 body .formulario form {
   background-color: #1A75BC;
-  width: 70%;
-  height: 400px;
+  width: 50%;
+  height: 200px;
   padding: 25px;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body .formulario form input[type='text'] {
+body .formulario form .pelajes .sexo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+}
+
+body .formulario form .textoForm {
+  width: 45%;
+  padding-left: 25px;
+}
+
+body .formulario form .textoForm input[type='text'] {
   width: 200px;
   height: 25px;
   padding-left: 5px;
@@ -105,8 +132,8 @@ body .formulario form input[type='text'] {
   margin-left: 15px;
 }
 
-body .formulario form input[type="password"] {
-  width: 200px;
+body .formulario form .textoForm input[type="number"] {
+  width: 300px;
   height: 25px;
   padding-left: 5px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -114,11 +141,14 @@ body .formulario form input[type="password"] {
   margin-left: 15px;
 }
 
-body .formulario form button {
+body .formulario form .textoForm button {
   width: 100px;
   height: 30px;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-color: grey;
+  color: white;
+  border: none;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 body .containerTarjetas {
@@ -170,12 +200,11 @@ body .containerTarjetas .card .textoCh .parrCh {
 body .containerTarjetas .card button {
   background-color: grey;
   color: white;
-  width: 70px;
-  height: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: none;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 70px;
+  height: 20px;
 }
 
 body .containerTarjetas .card .imagenCh {
@@ -242,18 +271,16 @@ body .modal .modalcontent #nombreGr {
 
 body .modal .modalcontent .parrGr {
   font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body .modal .modalcontent #cerrarModal {
   background-color: grey;
   color: white;
-  width: 100px;
-  height: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: none;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 100px;
+  height: 30px;
 }
 
 body .nomostrar {

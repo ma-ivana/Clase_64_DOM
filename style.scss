@@ -1,5 +1,6 @@
 $colorBlanco: white;
 $colorAzul: #1A75BC;
+$colorAmarillo: rgb(245, 217, 60);
 $boxShadowForm: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
 @mixin flexComun {
   display: flex;
@@ -9,6 +10,12 @@ $boxShadowForm: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@mixin botonBorderYColor {
+  background-color: grey;
+    color: $colorBlanco;
+    border: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 body {
@@ -41,7 +48,7 @@ body {
     .contenedortexto {
       width: 70%;
       height: 350px;
-      background-color: rgb(245, 217, 60);
+      background-color: $colorAmarillo;
       display: flex;
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
       
@@ -74,33 +81,43 @@ body {
     @include flexComun;
     form {
       background-color: $colorAzul;
-      width: 70%;
-      height: 400px;
+      width: 50%;
+      height: 200px;
       padding: 25px;
       color: $colorBlanco;
-      
-  
-    input[type='text'] {
-      width: 200px;
-      height: 25px;
-      padding-left: 5px;
-      box-shadow: $boxShadowForm;
-      margin-left: 15px;
-    }
+      @include flexBetween;
 
-    input[type="password"] {
-      width: 200px;
-      height: 25px;
-      padding-left: 5px;
-      box-shadow: $boxShadowForm;
-      margin-left: 15px;
-    }
+      .pelajes .sexo {
+        @include flexBetween;
+        width: 25%;
+      }
 
-    button {
-    width: 100px;
-    height: 30px;
-    box-shadow: $boxShadowForm;
-    }
+      .textoForm {
+        width: 45%;
+        padding-left:25px;
+        input[type='text'] {
+          width: 200px;
+          height: 25px;
+          padding-left: 5px;
+          box-shadow: $boxShadowForm;
+          margin-left: 15px;
+        }
+
+        input[type="number"] {
+          width: 300px;
+          height: 25px;
+          padding-left: 5px;
+          box-shadow: $boxShadowForm;
+          margin-left: 15px;
+        }
+
+        button {
+        width: 100px;
+        height: 30px;
+        // box-shadow: $boxShadowForm;
+        @include botonBorderYColor;
+        }
+      }
   }
 }
 
@@ -147,14 +164,9 @@ body {
       }
 
       button {
-        background-color: grey;
-        color: $colorBlanco;
+        @include botonBorderYColor; 
         width: 70px;
         height: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        border: none;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
-
       }
 
       .imagenCh {
@@ -171,7 +183,7 @@ body {
   
   .card {
     .textoCh:hover {
-      background-color: rgb(245, 217, 60);
+      background-color: $colorAmarillo;
       color: grey;
     }
     .imagenCh {
@@ -213,17 +225,12 @@ body {
     }
     .parrGr {
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
     #cerrarModal {
-    background-color: grey;
-    color: $colorBlanco;
+    @include botonBorderYColor;
     width: 100px;
     height: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: none;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
   }
 }

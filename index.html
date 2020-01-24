@@ -36,27 +36,35 @@
 
     <div class=formulario>
   <form action="testURL.com" method="post">
-    <label for="checkbox"><span>Pelaje</span><br>
-        <input type="checkbox" name="pelaje" value="negro">Negro
-        <input type="checkbox" name="pelaje" value="blanco">Blanco
-        <input type="checkbox" name="pelaje" value="gris">Gris
-        <input type="checkbox" name="pelaje" value="naranja">Naranja
-        <input type="checkbox" name="pelaje" value="amarillo">Amarillo
-        <input type="checkbox" name="pelaje" value="rayado">Rayado
+    <label for="checkbox" class="pelajes"><span>Pelaje</span><br>
+        <div class="pelaje1">
+            <input type="checkbox" name="pelaje" value="negro">Negro<br>
+            <input type="checkbox" name="pelaje" value="blanco">Blanco<br>
+            <input type="checkbox" name="pelaje" value="gris">Gris<br>
+        </div>
+        <div class="pelaje2">
+        <input type="checkbox" name="pelaje" value="naranja">Naranja<br>
+        <input type="checkbox" name="pelaje" value="amarillo">Amarillo<br>
+        <input type="checkbox" name="pelaje" value="rayado">Rayado<br>
+        </div>
     </label><br><br>
-    <label for="checkbox"><span>Sexo</span><br>
-        <input type="radio" name="sexo" value="macho">Macho
-        <input type="radio" name="sexo" value="hembra">Hembra
-        <input type="radio" name="sexo" value="indif">Indiferente
+    <label for="checkbox" class="sexo"><span>Sexo</span><br>
+        <div>
+        <input type="radio" name="sexo" value="macho">Macho<br>
+        <input type="radio" name="sexo" value="hembra">Hembra<br>
+        <input type="radio" name="sexo" value="indif">Indiferente<br>
+        </div>
     </label><br><br>
+    <div class="textoForm">
     <label for="username">Nombre
-      <input type="text" id="username" required placeholder="Escribí tu nombre de usuario" name="username"><br><br><br>
-    </label>
+      <input type="text" id="username" required placeholder="Escribí tu nombre de usuario" name="username">
+    </label><br><br>
     <label for="telefono">Teléfono de contacto
-      <input type="number" id="telefono" required placeholder="Escribí un teléfono de contacto" name="telefono"><br><br><br>
+      <input type="number" id="telefono" required placeholder="Escribí un teléfono de contacto" name="telefono">
     </label>
-    <p id="informacion"></p><br><br><br>
+    <p id="informacion"></p>
     <button type="submit">Enviar</button>
+    </div>
   </form>
   </div>
 
