@@ -1,90 +1,90 @@
-@use 'forms';
+$colorBlanco: white;
+$colorAzul: #1A75BC;
+$boxShadowForm: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+@mixin flexComun {
+  display: flex;
+  justify-content: center;
+}
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 body {
-    background-color: white;
+    background-color: $colorBlanco;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   
   nav {
-    background-color: #1A75BC;
+    background-color: $colorAzul;
     padding: 20px;
     padding-bottom: 20px;
-    color: white;
+    color:$colorBlanco;
     height: 80px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexBetween;
     div {
-        h3 {
-            color: white;
-        }
-
-        .fa {
-          font-size: 40px;
-        }
-
+      h3 {
+        color:$colorBlanco;
+      }
+      .fa {
+        font-size: 40px;
+      }
     }
   }
   section {
-    display: flex;
-    justify-content: center;
-    
+    @include flexComun;    
     margin-top: 15px;
     margin-bottom: 25px;
 
     .contenedortexto {
-        width: 70%;
-        height: 350px;
-        background-color: rgb(245, 217, 60);
-        display: flex;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+      width: 70%;
+      height: 350px;
+      background-color: rgb(245, 217, 60);
+      display: flex;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
       
-        .texto {
-            width: 55%;
-            padding: 3%;
-            h1 {
-                color: #1A75BC;
-              }
-              h5 {
-                color: grey;
-              }
-              p {
-                color: black;
-                font-size: 16px;
-              }
+      .texto {
+        width: 55%;
+        padding: 3%;
+        h1 {
+          color: $colorAzul;
         }
+        h5 {
+          color: grey;
+        }
+        p {
+          color: black;
+          font-size: 16px;
+        }
+      }
     
-        .imagen {
+      .imagen {
         width: 45%;
         background-image: url("img/gatito10.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
-          // img {
-          //   width: 100%;
-          //   height: auto;
-          // }
-        }
+      }
     }
   }
 
   .formulario {
-    display: flex;
-    justify-content: center;
+    @include flexComun;
     form {
-    background-color: #1A75BC;
-    width: 70%;
-    height: 400px;
-    padding: 25px;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: $colorAzul;
+      width: 70%;
+      height: 400px;
+      padding: 25px;
+      color: $colorBlanco;
+      
   
     input[type='text'] {
       width: 200px;
       height: 25px;
       padding-left: 5px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+      box-shadow: $boxShadowForm;
       margin-left: 15px;
     }
 
@@ -92,17 +92,16 @@ body {
       width: 200px;
       height: 25px;
       padding-left: 5px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      box-shadow: $boxShadowForm;
       margin-left: 15px;
     }
 
-  button {
-  width: 100px;
-  height: 30px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  font-family: Verdana, Geneva, Tahoma, sans-serif
-  }
+    button {
+    width: 100px;
+    height: 30px;
+    box-shadow: $boxShadowForm;
     }
+  }
 }
 
 
@@ -131,11 +130,11 @@ body {
        width: 47%;
        height: 150px;
        
-       background-color:#1A75BC;
+       background-color:$colorAzul;
        text-align: center;
        box-sizing: content-box;
        padding: 2%;
-       color: white;
+       color: $colorBlanco;
        
 
           h4 {
@@ -149,7 +148,7 @@ body {
 
       button {
         background-color: grey;
-        color: white;
+        color: $colorBlanco;
         width: 70px;
         height: 20px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -192,9 +191,7 @@ body {
   box-sizing: content-box;
   padding: 20px;
   background-color: rgb(236, 232, 205);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexBetween;
 
   .imagenGR {
     width: 400px;
@@ -221,7 +218,7 @@ body {
 
     #cerrarModal {
     background-color: grey;
-    color: white;
+    color: $colorBlanco;
     width: 100px;
     height: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
