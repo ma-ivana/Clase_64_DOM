@@ -95,10 +95,10 @@ body .formulario form {
   height: 400px;
   padding: 25px;
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif input;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body .formulario form [type="text"] {
+body .formulario form input[type='text'] {
   width: 200px;
   height: 25px;
   padding-left: 5px;
@@ -107,7 +107,7 @@ body .formulario form [type="text"] {
   margin-left: 15px;
 }
 
-body .formulario form [type="password"] {
+body .formulario form input[type="password"] {
   width: 200px;
   height: 25px;
   padding-left: 5px;
