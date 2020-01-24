@@ -238,5 +238,25 @@ body {
   display: none;
 }
 
+footer {
+  background-color: $colorAmarillo;
+  height: 160px;
+  padding: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 
+  .containerRedes {
+      i {
+          //color: black;
+      }
+  }
+  .containerCopyright {
+      i, p {
+          // color: black;
+      }
+  }
+}
 }
