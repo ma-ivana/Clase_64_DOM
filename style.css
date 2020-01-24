@@ -1,10 +1,11 @@
+@use 'forms';
 body {
   background-color: white;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-nav {
+body nav {
   background-color: #1A75BC;
   padding: 20px;
   padding-bottom: 20px;
@@ -23,15 +24,15 @@ nav {
           align-items: center;
 }
 
-nav div h3 {
+body nav div h3 {
   color: white;
 }
 
-nav div .fa {
+body nav div .fa {
   font-size: 40px;
 }
 
-section {
+body section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,7 +43,7 @@ section {
   margin-bottom: 25px;
 }
 
-section .contenedortexto {
+body section .contenedortexto {
   width: 70%;
   height: 350px;
   background-color: #f5d93c;
@@ -53,25 +54,25 @@ section .contenedortexto {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-section .contenedortexto .texto {
+body section .contenedortexto .texto {
   width: 55%;
   padding: 3%;
 }
 
-section .contenedortexto .texto h1 {
+body section .contenedortexto .texto h1 {
   color: #1A75BC;
 }
 
-section .contenedortexto .texto h5 {
+body section .contenedortexto .texto h5 {
   color: grey;
 }
 
-section .contenedortexto .texto p {
+body section .contenedortexto .texto p {
   color: black;
   font-size: 16px;
 }
 
-section .contenedortexto .imagen {
+body section .contenedortexto .imagen {
   width: 45%;
   background-image: url("img/gatito10.jpg");
   background-repeat: no-repeat;
@@ -79,7 +80,51 @@ section .contenedortexto .imagen {
   overflow: hidden;
 }
 
-.containerTarjetas {
+body .formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .formulario form {
+  background-color: #1A75BC;
+  width: 70%;
+  height: 400px;
+  padding: 25px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif input;
+}
+
+body .formulario form [type="text"] {
+  width: 200px;
+  height: 25px;
+  padding-left: 5px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin-left: 15px;
+}
+
+body .formulario form [type="password"] {
+  width: 200px;
+  height: 25px;
+  padding-left: 5px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin-left: 15px;
+}
+
+body .formulario form button {
+  width: 100px;
+  height: 30px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body .containerTarjetas {
   max-width: 65%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +136,7 @@ section .contenedortexto .imagen {
       flex-wrap: wrap;
 }
 
-.containerTarjetas .card {
+body .containerTarjetas .card {
   width: 47%;
   height: 150px;
   display: -webkit-box;
@@ -106,7 +151,7 @@ section .contenedortexto .imagen {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.containerTarjetas .card .textoCh {
+body .containerTarjetas .card .textoCh {
   width: 47%;
   height: 150px;
   background-color: #1A75BC;
@@ -117,15 +162,15 @@ section .contenedortexto .imagen {
   color: white;
 }
 
-.containerTarjetas .card .textoCh h4 {
+body .containerTarjetas .card .textoCh h4 {
   margin-bottom: 0;
 }
 
-.containerTarjetas .card .textoCh .parrCh {
+body .containerTarjetas .card .textoCh .parrCh {
   font-size: 10px;
 }
 
-.containerTarjetas .card button {
+body .containerTarjetas .card button {
   background-color: grey;
   color: white;
   width: 70px;
@@ -136,22 +181,85 @@ section .contenedortexto .imagen {
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.containerTarjetas .card .imagenCh {
+body .containerTarjetas .card .imagenCh {
   width: 50%;
   height: auto;
 }
 
-.containerTarjetas .card .imagenCh img {
+body .containerTarjetas .card .imagenCh img {
   width: 100%;
 }
 
-.card .textoCh:hover {
+body .card .textoCh:hover {
   background-color: #f5d93c;
   color: grey;
 }
 
-.card .imagenCh img:hover {
+body .card .imagenCh img:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
+}
+
+body .modal {
+  width: 1000px;
+  height: 300px;
+  position: fixed;
+  top: 50px;
+  left: 250px;
+  -webkit-box-shadow: 8px 8px 5px 5px;
+          box-shadow: 8px 8px 5px 5px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 20px;
+  background-color: #ece8cd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .modal .imagenGR {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+
+body .modal .imagenGR img {
+  width: 100%;
+}
+
+body .modal .modalcontent {
+  width: 550px;
+}
+
+body .modal .modalcontent #nombreGr {
+  font-size: 30px;
+  margin-top: 5px;
+  color: #3a3939;
+}
+
+body .modal .modalcontent .parrGr {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body .modal .modalcontent #cerrarModal {
+  background-color: grey;
+  color: white;
+  width: 100px;
+  height: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body .nomostrar {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

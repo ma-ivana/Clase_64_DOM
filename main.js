@@ -48,42 +48,36 @@ const gatos = [
       <div class="textoCh"> 
       <h4>${gatos[i].name}</h4>
       <p class="parrCh">${gatos[i].shortDesc}</p>
-      <button>Ver más</button>
+      <button id="info">Ver más</button>
       </div>
     </article>
+
+    <div id="infoModal" class="modal nomostrar">
+      <div class="imagenGR"> <img src="${gatos[i].img}"> </div>
+        <div class="modalcontent">
+          <h4 id="nombreGr">${gatos[i].name}</h4>
+          <p class="parrGr">${gatos[i].longDesc}</p>
+          <button id="cerrarModal">Cerrar</button>
+        </div>
+    </div>
     `
   }
 
 cards.innerHTML = tarjetasDinamicas;
 
-  // <div class="imagen"> <img src="${usuarios[i].foto}"> </div>
-  //       <div class="info">
-  //         <h4>${usuarios[i].nombre}</h4>
-  //         <p id="descripcion">${usuarios[i].descripcion}</p>
-  //         <p><i class="fa fa-heart"></i><span class="likes"> 0</span> likes</p>
-  //       </div>
-  // cards.innerHTML = tarjetasDinamicas;
-  // const imagenes = document.getElementsByClassName("imagen");
-  // const corazones = document.querySelectorAll(".fa.fa-heart");
-  // const likes = document.getElementsByClassName("likes");
-  // for (let i = 0; i < imagenes.length; i++) {
-  //   imagenes[i].onclick = () => {
-  //   corazones[i].classList.add("colorHeart");
-  //   let cantidadDeLikes = Number(likes[i].textContent);
-  //   cantidadDeLikes++;
-  //   likes[i].textContent = cantidadDeLikes;
-  // }
-  // corazones[i].onclick = () => {
-  //   if (likes[i].textContent > "0") {
-  //   corazones[i].classList.remove("colorHeart");
-  //   let cantidadDeLikes = Number(likes[i].textContent);
-  //   cantidadDeLikes--;
-  //   likes[i].textContent = cantidadDeLikes;
-  //   }
-  //   if (likes[i].textContent === "0") {
-  //     corazones[i].classList.remove("colorHeart")
-  //   } else {
-  //     corazones[i].classList.add("colorHeart")
-  //   }
-  // }
-  // }
+
+const modal = document.querySelectorAll("#infoModal");
+
+const botonAbrirModal = document.querySelectorAll("#info");
+const botonCerrarModal = document.querySelectorAll("#cerrarModal")
+
+for (let i = 0; i < modal.length; i++) {
+botonAbrirModal[i].onclick = () => {
+  modal[i].classList.remove("nomostrar") 
+}
+
+botonCerrarModal[i].onclick = () => {
+  modal[i].classList.add("nomostrar")
+}
+
+}

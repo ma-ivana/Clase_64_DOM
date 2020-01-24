@@ -1,8 +1,10 @@
+@use 'forms';
+
 body {
     background-color: white;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+  
   nav {
     background-color: #1A75BC;
     padding: 20px;
@@ -66,6 +68,47 @@ body {
         }
     }
   }
+
+  .formulario {
+    display: flex;
+    justify-content: center;
+    form {
+    background-color: #1A75BC;
+    width: 70%;
+    height: 400px;
+    padding: 25px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+  
+    input {}
+    [type="text"] {
+      width: 200px;
+      height: 25px;
+      padding-left: 5px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+      margin-left: 15px;
+    }
+
+    [type="password"] {
+      width: 200px;
+      height: 25px;
+      padding-left: 5px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      margin-left: 15px;
+    }
+
+  button {
+  width: 100px;
+  height: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+  }
+    }
+}
+
+
+
+
 
 .containerTarjetas {
   max-width: 65%;
@@ -140,6 +183,57 @@ body {
     }
   }
 
+.modal {
+  width: 1000px;
+  height: 300px;
+  position: fixed;
+  top: 50px;
+  left: 250px;
+  box-shadow: 8px 8px 5px 5px;
+  box-sizing: content-box;
+  padding: 20px;
+  background-color: rgb(236, 232, 205);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .imagenGR {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    
+
+    img {
+      width: 100%;
+        }
+  }
+
+  .modalcontent {
+    width: 550px;
+    #nombreGr {
+      font-size: 30px;
+      margin-top: 5px;
+      color: rgb(58, 57, 57);
+    }
+    .parrGr {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #cerrarModal {
+    background-color: grey;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  }
+}
+.nomostrar {
+  display: none;
+}
 
 
-  
+}
