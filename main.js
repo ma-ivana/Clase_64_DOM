@@ -1,6 +1,3 @@
-//recorrer el array
-//por cada usuario, crear una card con sus datos
-//manejar sistema de likes para que el clic en cada foto de usuarios, le dé likes solo a ese usuario
 const gatos = [
   {
     name: "Rodolfo",

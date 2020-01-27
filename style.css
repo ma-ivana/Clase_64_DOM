@@ -92,35 +92,41 @@ body .formulario form {
   background-color: #1A75BC;
   width: 50%;
   height: 200px;
-  padding: 25px;
+  padding: 25px 25px 25px 50px;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-body .formulario form .pelajes .sexo {
+body .formulario form .pelajes, body .formulario form .sexo {
+  font-weight: bold;
+  line-height: 35px;
+}
+
+body .formulario form .textoForm {
+  width: 45%;
+  padding: 0px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 25%;
-}
-
-body .formulario form .textoForm {
-  width: 45%;
-  padding-left: 25px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body .formulario form .textoForm input[type='text'] {
@@ -129,7 +135,6 @@ body .formulario form .textoForm input[type='text'] {
   padding-left: 5px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  margin-left: 15px;
 }
 
 body .formulario form .textoForm input[type="number"] {
@@ -138,7 +143,6 @@ body .formulario form .textoForm input[type="number"] {
   padding-left: 5px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  margin-left: 15px;
 }
 
 body .formulario form .textoForm button {
@@ -287,14 +291,21 @@ body .nomostrar {
   display: none;
 }
 
-footer {
-  background-color: rgb(245, 217, 60);
+body footer {
+  background-color: #f5d93c;
   height: 160px;
   padding: 20px;
-    padding-bottom: 20px;
-    box-sizing: border-box;
-    display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
