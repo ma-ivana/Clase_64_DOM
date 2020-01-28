@@ -247,23 +247,27 @@ body {
 
 footer {
   background-color: $colorAmarillo;
-  height: 160px;
-  padding: 20px;
-    padding-bottom: 20px;
-    box-sizing: border-box;
-    display: flex;
-  justify-content: center;
+  height: 100px;
+  padding: 25px 10px 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;  
+  justify-content: space-around;
   align-items: center;
+  color: black;
 
-  // .containerRedes {
-  //     i {
-  //         //color: black;
-  //     }
-  // }
-  // .containerCopyright {
-  //     i, p {
-  //         // color: black;
-  //     }
-  // }
+  .containerRedes {
+      i {          
+          margin: 0px 15px;
+      }
+  }
+  .containerCopyright {
+      i, p {
+          margin: 0px 15px;
+          color: black;
+          display: inline-block;
+          font-size: small;
+      }
+  }
 }
 }

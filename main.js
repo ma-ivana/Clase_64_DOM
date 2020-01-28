@@ -1,5 +1,3 @@
-// Hola
-
 const gatos = [
   {
     name: "Rodolfo",
@@ -44,9 +42,9 @@ const gatos = [
     img: "img/gatito5.jpeg",
     pelaje: ["negro"],
     sexo: "macho"
-  },
-
+  }
 ]
+
 const cards = document.querySelector(".containerTarjetas");
 console.log(cards);
 let tarjetasDinamicas = "";
@@ -70,7 +68,7 @@ for (let i = 0; i < gatos.length; i++) {
         </div>
     </div>
     `
-}
+};
 
 cards.innerHTML = tarjetasDinamicas;
 
@@ -78,7 +76,7 @@ cards.innerHTML = tarjetasDinamicas;
 const modal = document.querySelectorAll("#infoModal");
 
 const botonAbrirModal = document.querySelectorAll("#info");
-const botonCerrarModal = document.querySelectorAll("#cerrarModal")
+const botonCerrarModal = document.querySelectorAll("#cerrarModal");
 
 for (let i = 0; i < modal.length; i++) {
   botonAbrirModal[i].onclick = () => {
@@ -89,75 +87,46 @@ for (let i = 0; i < modal.length; i++) {
     modal[i].classList.add("nomostrar")
   }
 
-}
+};
 
 
-forms = document.querySelector('form')
+forms = document.querySelector('form');
 
 
 
 forms.onsubmit = e => {
   e.preventDefault();
+  console.log("aqui");
 
-console.log("aqui")
+  const checkboxes = document.querySelectorAll("input[type='checkbox']");
+  let pelajeElegido = [];
+  for (let i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      pelajeElegido.push(checkboxes[i].value)
+    }
+  };  
 
-const checkboxes = document.querySelectorAll("input[type='checkbox']");
+  console.log(pelajeElegido);
 
-let pelajeElegido = []
-
-for (let i = 0; i < checkboxes.length; i++) {
-
-
-
-  if (checkboxes[i].checked) {
-    pelajeElegido.push(checkboxes[i].value)
+  if (!pelajeElegido.length) {
+  alert(`Por favor seleccioná una opción`)
+  } else if (pelajeElegido.length === 1) {
+  console.log(`Elegiste la opción ${pelajeElegido[0]}`)
+  } else {
+  console.log(`Elegiste las opciones ${pelajeElegido.join(", ")}`)
   }
 
-};
 
-console.log(pelajeElegido)
 
-if (!pelajeElegido.length) {
-  alert(`Por favor seleccioná una opción`)
-}
-else if (pelajeElegido.length === 1) {
-  console.log(`Elegiste la opción ${pelajeElegido[0]}`)
-}
+  const radios = document.querySelectorAll("input[type='radio']");
+  let sexoElegido = "";
 
-else {
-  console.log(`Elegiste las opciones ${pelajeElegido.join(", ")}`)
-}
+  for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) { 
+      sexoElegido = radios[i].value;
+    }   
+  }
 
+ console.log(`El sexo elegido es ${sexoElegido}`);
 
 }
-
-
-// const formAnimales = document.forms[2];
-
-// formAnimales.onsubmit = e => {
-//   e.preventDefault();
-//   const checkboxes = document.querySelectorAll("input[type='checkbox']");
-//   let opcionesElegidas = [];
-
-//   for (let i = 0; i < checkboxes.length; i++) {
-//   if (checkboxes[i].checked ) { 
-//     opcionesElegidas.push(checkboxes[i].value)   
-//   }
-
-        
-//   if (!opcionesElegidas.length) {   
-//     alert("Por favor selecciona una opcion");
-//   }  else {
-//    if  (opcionesElegidas.length === 1) {
-//           alert(`Elegiste la opcion ${opcionesElegidas[0]}`)   
-//   }
-      
-//     else {      
-//       alert(`Elegiste las opciones ${opcionesElegidas.join(", ")}`)    
-//     } 
-
-//   }
-        
-  
-// } 
-// } 
