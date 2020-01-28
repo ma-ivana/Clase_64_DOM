@@ -1,0 +1,269 @@
+$colorBlanco: white;
+$colorAzul: #1A75BC;
+$colorAmarillo: rgb(245, 217, 60);
+$boxShadowForm: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+@mixin flexComun {
+  display: flex;
+  justify-content: center;
+}
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin botonBorderYColor {
+  background-color: grey;
+    color: $colorBlanco;
+    border: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+body {
+    background-color: $colorBlanco;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  nav {
+    background-color: $colorAzul;
+    padding: 20px;
+    padding-bottom: 20px;
+    color:$colorBlanco;
+    height: 80px;
+    box-sizing: border-box;
+    @include flexBetween;
+    div {
+      h3 {
+        color:$colorBlanco;
+      }
+      .fa {
+        font-size: 40px;
+      }
+    }
+  }
+  section {
+    @include flexComun;    
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    .contenedortexto {
+      width: 70%;
+      height: 350px;
+      background-color: $colorAmarillo;
+      display: flex;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+      
+      .texto {
+        width: 55%;
+        padding: 3%;
+        h1 {
+          color: $colorAzul;
+        }
+        h5 {
+          color: grey;
+        }
+        p {
+          color: black;
+          font-size: 16px;
+        }
+      }
+    
+      .imagen {
+        width: 45%;
+        background-image: url("img/gatito10.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .formulario {
+    @include flexComun;
+    form {
+      background-color: $colorAzul;
+      width: 50%;
+      height: 200px;
+      padding: 25px 25px 25px 50px;
+      color: $colorBlanco;
+      // @include flexBetween;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .pelajes, .sexo {
+        font-weight: bold;
+        line-height: 35px;
+      }
+
+      .textoForm {
+        width: 45%;
+        padding: 0px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+        input[type='text'] {
+          width: 200px;
+          height: 25px;
+          padding-left: 5px;
+          box-shadow: $boxShadowForm;
+          // margin-left: 15px;
+        }
+
+        input[type="number"] {
+          width: 300px;
+          height: 25px;
+          padding-left: 5px;
+          box-shadow: $boxShadowForm;
+          // margin-left: 15px;
+        }
+
+        button {
+        width: 100px;
+        height: 30px;
+        // box-shadow: $boxShadowForm;
+        @include botonBorderYColor;
+        }
+      }
+  }
+}
+
+
+
+
+
+.containerTarjetas {
+  max-width: 65%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+
+    .card {
+      
+      width: 47%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      margin: 1%;
+      overflow: hidden;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+      
+
+      .textoCh {
+       width: 47%;
+       height: 150px;
+       
+       background-color:$colorAzul;
+       text-align: center;
+       box-sizing: content-box;
+       padding: 2%;
+       color: $colorBlanco;
+       
+
+          h4 {
+            margin-bottom: 0;
+          }
+
+          .parrCh {
+            font-size: 10px;
+          }
+      }
+
+      button {
+        @include botonBorderYColor; 
+        width: 70px;
+        height: 20px;
+      }
+
+      .imagenCh {
+        width: 50%;
+        height: auto;
+
+        img {
+        width: 100%;
+        }
+      }
+}
+}
+
+  
+  .card {
+    .textoCh:hover {
+      background-color: $colorAmarillo;
+      color: grey;
+    }
+    .imagenCh {
+      img:hover {
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+
+.modal {
+  width: 1000px;
+  height: 300px;
+  position: fixed;
+  top: 50px;
+  left: 250px;
+  box-shadow: 8px 8px 5px 5px;
+  box-sizing: content-box;
+  padding: 20px;
+  background-color: rgb(236, 232, 205);
+  @include flexBetween;
+
+  .imagenGR {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    
+
+    img {
+      width: 100%;
+        }
+  }
+
+  .modalcontent {
+    width: 550px;
+    #nombreGr {
+      font-size: 30px;
+      margin-top: 5px;
+      color: rgb(58, 57, 57);
+    }
+    .parrGr {
+    font-size: 16px;
+    }
+
+    #cerrarModal {
+    @include botonBorderYColor;
+    width: 100px;
+    height: 30px;
+    }
+  }
+}
+.nomostrar {
+  display: none;
+}
+
+footer {
+  background-color: $colorAmarillo;
+  height: 160px;
+  padding: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // .containerRedes {
+  //     i {
+  //         //color: black;
+  //     }
+  // }
+  // .containerCopyright {
+  //     i, p {
+  //         // color: black;
+  //     }
+  // }
+}
+}

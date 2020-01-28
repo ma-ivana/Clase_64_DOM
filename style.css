@@ -1,0 +1,311 @@
+body {
+  background-color: white;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body nav {
+  background-color: #1A75BC;
+  padding: 20px;
+  padding-bottom: 20px;
+  color: white;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body nav div h3 {
+  color: white;
+}
+
+body nav div .fa {
+  font-size: 40px;
+}
+
+body section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+body section .contenedortexto {
+  width: 70%;
+  height: 350px;
+  background-color: #f5d93c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body section .contenedortexto .texto {
+  width: 55%;
+  padding: 3%;
+}
+
+body section .contenedortexto .texto h1 {
+  color: #1A75BC;
+}
+
+body section .contenedortexto .texto h5 {
+  color: grey;
+}
+
+body section .contenedortexto .texto p {
+  color: black;
+  font-size: 16px;
+}
+
+body section .contenedortexto .imagen {
+  width: 45%;
+  background-image: url("img/gatito10.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+body .formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .formulario form {
+  background-color: #1A75BC;
+  width: 50%;
+  height: 200px;
+  padding: 25px 25px 25px 50px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .formulario form .pelajes, body .formulario form .sexo {
+  font-weight: bold;
+  line-height: 35px;
+}
+
+body .formulario form .textoForm {
+  width: 45%;
+  padding: 0px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .formulario form .textoForm input[type='text'] {
+  width: 200px;
+  height: 25px;
+  padding-left: 5px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+body .formulario form .textoForm input[type="number"] {
+  width: 300px;
+  height: 25px;
+  padding-left: 5px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+body .formulario form .textoForm button {
+  width: 100px;
+  height: 30px;
+  background-color: grey;
+  color: white;
+  border: none;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body .containerTarjetas {
+  max-width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .containerTarjetas .card {
+  width: 47%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1%;
+  overflow: hidden;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body .containerTarjetas .card .textoCh {
+  width: 47%;
+  height: 150px;
+  background-color: #1A75BC;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 2%;
+  color: white;
+}
+
+body .containerTarjetas .card .textoCh h4 {
+  margin-bottom: 0;
+}
+
+body .containerTarjetas .card .textoCh .parrCh {
+  font-size: 10px;
+}
+
+body .containerTarjetas .card button {
+  background-color: grey;
+  color: white;
+  border: none;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 70px;
+  height: 20px;
+}
+
+body .containerTarjetas .card .imagenCh {
+  width: 50%;
+  height: auto;
+}
+
+body .containerTarjetas .card .imagenCh img {
+  width: 100%;
+}
+
+body .card .textoCh:hover {
+  background-color: #f5d93c;
+  color: grey;
+}
+
+body .card .imagenCh img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+body .modal {
+  width: 1000px;
+  height: 300px;
+  position: fixed;
+  top: 50px;
+  left: 250px;
+  -webkit-box-shadow: 8px 8px 5px 5px;
+          box-shadow: 8px 8px 5px 5px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 20px;
+  background-color: #ece8cd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .modal .imagenGR {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
+
+body .modal .imagenGR img {
+  width: 100%;
+}
+
+body .modal .modalcontent {
+  width: 550px;
+}
+
+body .modal .modalcontent #nombreGr {
+  font-size: 30px;
+  margin-top: 5px;
+  color: #3a3939;
+}
+
+body .modal .modalcontent .parrGr {
+  font-size: 16px;
+}
+
+body .modal .modalcontent #cerrarModal {
+  background-color: grey;
+  color: white;
+  border: none;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 100px;
+  height: 30px;
+}
+
+body .nomostrar {
+  display: none;
+}
+
+body footer {
+  background-color: #f5d93c;
+  height: 160px;
+  padding: 20px;
+  padding-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
