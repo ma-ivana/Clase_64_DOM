@@ -98,6 +98,8 @@ forms.onsubmit = e => {
   e.preventDefault();
   console.log("aqui");
 
+   // ----------- muestra el pelaje del gato elegido
+
   const checkboxes = document.querySelectorAll("input[type='checkbox']");
   let pelajeElegido = [];
   for (let i = 0; i < checkboxes.length; i++) {
@@ -116,7 +118,7 @@ forms.onsubmit = e => {
   console.log(`Elegiste las opciones ${pelajeElegido.join(", ")}`)
   }
 
-
+// ----------- muestra el sexo del gato elegido
 
   const radios = document.querySelectorAll("input[type='radio']");
   let sexoElegido = "";
@@ -128,5 +130,13 @@ forms.onsubmit = e => {
   }
 
  console.log(`El sexo elegido es ${sexoElegido}`);
+
+ // ----------- muestra el nombre de usuario ingresado
+ const nombreEscrito = document.getElementById("username");
+ console.log(`El nombre del usuario es ${nombreEscrito.value}`);
+
+ // ----------- muestra el teléfono ingresado
+ const telefonoeEscrito = document.getElementById("telefono");
+ console.log(`El nombre del usuario es ${telefonoeEscrito.value}`);
 
 }
