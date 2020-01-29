@@ -98,7 +98,7 @@ forms.onsubmit = e => {
   e.preventDefault();
   console.log("aqui");
 
-   // ----------- muestra el pelaje del gato elegido
+  // ----------- muestra el pelaje del gato elegido
 
   const checkboxes = document.querySelectorAll("input[type='checkbox']");
   let pelajeElegido = [];
@@ -106,37 +106,104 @@ forms.onsubmit = e => {
     if (checkboxes[i].checked) {
       pelajeElegido.push(checkboxes[i].value)
     }
-  };  
+  };
 
   console.log(pelajeElegido);
 
   if (!pelajeElegido.length) {
-  alert(`Por favor seleccioná una opción`)
+    alert(`Por favor seleccioná una opción`)
   } else if (pelajeElegido.length === 1) {
-  console.log(`Elegiste la opción ${pelajeElegido[0]}`)
+    console.log(`Elegiste la opción ${pelajeElegido[0]}`)
   } else {
-  console.log(`Elegiste las opciones ${pelajeElegido.join(", ")}`)
+    console.log(`Elegiste las opciones ${pelajeElegido.join(", ")}`)
   }
 
-// ----------- muestra el sexo del gato elegido
+  // ----------- muestra el sexo del gato elegido
 
   const radios = document.querySelectorAll("input[type='radio']");
   let sexoElegido = "";
 
   for (let i = 0; i < radios.length; i++) {
-    if (radios[i].checked) { 
+    if (radios[i].checked) {
       sexoElegido = radios[i].value;
-    }   
+    }
   }
 
- console.log(`El sexo elegido es ${sexoElegido}`);
+  console.log(`El sexo elegido es ${sexoElegido}`);
 
- // ----------- muestra el nombre de usuario ingresado
- const nombreEscrito = document.getElementById("username");
- console.log(`El nombre del usuario es ${nombreEscrito.value}`);
+  // ----------- muestra el nombre de usuario ingresado
+  const nombreEscrito = document.getElementById("username");
+  console.log(`El nombre del usuario es ${nombreEscrito.value}`);
 
- // ----------- muestra el teléfono ingresado
- const telefonoeEscrito = document.getElementById("telefono");
- console.log(`El nombre del usuario es ${telefonoeEscrito.value}`);
+  // ----------- muestra el teléfono ingresado
+  const telefonoeEscrito = document.getElementById("telefono");
+  console.log(`El nombre del usuario es ${telefonoeEscrito.value}`);
+
+
+
+
+// ----------- filtra por pelaje
+
+cards.innerHTML = '';
+
+tarjetasDinamicas = '';
+
+for (let i = 0; i < gatos.length; i++) {
+  if (gatos[i].pelaje === pelajeElegido) {
+    tarjetasDinamicas += `
+    <article class="card">
+      <div class="imagenCh"> <img src="${gatos[i].img}"> </div>
+      <div class="textoCh"> 
+      <h4>${gatos[i].name}</h4>
+      <p class="parrCh">${gatos[i].shortDesc}</p>
+      <button id="info">Ver más</button>
+      </div>
+    </article>
+    `
+  }
 
 }
+
+// ----------- filtra por sexo
+
+cards.innerHTML = '';
+
+tarjetasDinamicas = '';
+
+for (let i = 0; i < gatos.length; i++) {
+  if (gatos[i].sexo === sexoElegido || sexoElegido === "indif") {
+    console.log("estoy dentro del if")
+    tarjetasDinamicas += `
+    <article class="card">
+      <div class="imagenCh"> <img src="${gatos[i].img}"> </div>
+      <div class="textoCh"> 
+      <h4>${gatos[i].name}</h4>
+      <p class="parrCh">${gatos[i].shortDesc}</p>
+      <button id="info">Ver más</button>
+      </div>
+    </article>
+    `
+  }
+
+}
+
+cards.innerHTML = tarjetasDinamicas;
+
+// function agregarTarjetas() {
+//   `
+//     <article class="card">
+//       <div class="imagenCh"> <img src="${gatos[i].img}"> </div>
+//       <div class="textoCh"> 
+//       <h4>${gatos[i].name}</h4>
+//       <p class="parrCh">${gatos[i].shortDesc}</p>
+//       <button id="info">Ver más</button>
+//       </div>
+//     </article>
+//     `
+// }
+
+}
+
+
+
+
