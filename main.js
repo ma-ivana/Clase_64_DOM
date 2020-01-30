@@ -147,22 +147,50 @@ forms.onsubmit = e => {
 cards.innerHTML = '';
 
 tarjetasDinamicas = '';
+// -----------
+// pelaje = []
 
-for (let i = 0; i < gatos.length; i++) {
-  if (gatos[i].pelaje === pelajeElegido) {
-    tarjetasDinamicas += `
-    <article class="card">
-      <div class="imagenCh"> <img src="${gatos[i].img}"> </div>
-      <div class="textoCh"> 
-      <h4>${gatos[i].name}</h4>
-      <p class="parrCh">${gatos[i].shortDesc}</p>
-      <button id="info">Ver más</button>
-      </div>
-    </article>
-    `
-  }
+// function pelajeElegido(nuevoPelaje) {
+//   return nuevoPelaje === [i];
+// }
 
+// function filtroPelaje() {
+//   document.querySelector(".containerTarjetas").innerHTML = pelaje.find(pelajeElegido);
+// }
+// https://www.w3schools.com/jsref/jsref_find.asp 
+
+// --------------
+
+// let filtroPelaje = gatos.pelaje.filter(pelajeActual => pelajeActual === pelajeElegido);
+// tarjetasDinamicas.push(pelajeActual)
+
+// for (let i = 0; i < gatos.length; i++) {
+//   var pelajeActual = pelaje[i];
+//   if (pelajeActual === pelajeElegido) {
+//     filtroPelaje.push(pelajeActual)
+//   }
+  // --------------
+
+  let filtroPelaje = gatos.filter(gato => gatos.pelaje === pelajeElegido)
+  tarjetasDinamicas.push(filtroPelaje)
+  console.log(filtroPelaje)
 }
+
+// for (let i = 0; i < gatos.length; i++) {
+//   if (gatos[i].pelaje === pelajeElegido) {
+//     tarjetasDinamicas += `
+//     <article class="card">
+//       <div class="imagenCh"> <img src="${gatos[i].img}"> </div>
+//       <div class="textoCh"> 
+//       <h4>${gatos[i].name}</h4>
+//       <p class="parrCh">${gatos[i].shortDesc}</p>
+//       <button id="info">Ver más</button>
+//       </div>
+//     </article>
+//     `
+//   }
+
+// }
 
 // ----------- filtra por sexo
 
@@ -202,7 +230,7 @@ cards.innerHTML = tarjetasDinamicas;
 //     `
 // }
 
-}
+
 
 
 
