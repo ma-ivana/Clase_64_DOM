@@ -68,7 +68,7 @@ forms.onsubmit = e => {
 
      
 
-  const arrayPorPelaje = gatos.filter(gato => gato.pelaje.includes(...pelajeElegido));
+  const arrayPorPelaje = gatos.filter(gato => gato.pelaje.includes(...pelajeElegido)); // el método .includes da true o false según esté incluido el parámetro indicado entre paréntesis en el array evaluado, en este caso "gatos". pelajeElegido es el array que viene de lo que el usuario selecciona en el formulario. Como es un array, para usarlo como argumentos entre los paréntesis de .includes, se usa SPREAD, que se escribe con tres puntos delante del nombre del array, en este caso pelajeElegido.
   console.log("dentro del filter de pelaje");
   console.log(arrayPorPelaje);
 
@@ -99,21 +99,7 @@ forms.onsubmit = e => {
   console.log("dentro de filtro pelaje y sexo");
   console.log(arrayPorPelajeySexo);
 
-  // const pelajeString = pelajeElegido.map (pelaje => {
-  //   return pelaje.toString();
-  // });
-  // console.log("pelaje en string");
-  // console.log(pelajeString);
-
-  // const gatoPelaje = gatos.filter(gato => { 
-  //   if (gato.pelaje.includes(pelajeString)) {
-  //     return gato;
-    
-  // }});
-  // console.log("dentro de gatoPelaje");
   
-  // console.log(gatoPelaje);
-
   // ----------- muestra el nombre de usuario ingresado
   const nombreEscrito = document.getElementById("username");
   console.log(`El nombre del usuario es ${nombreEscrito.value}`);
