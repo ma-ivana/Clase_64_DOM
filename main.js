@@ -45,49 +45,7 @@ const gatos = [
   }
 ]
 
-const cards = document.querySelector(".containerTarjetas");
-console.log(cards);
-let tarjetasDinamicas = "";
-for (let i = 0; i < gatos.length; i++) {
-  tarjetasDinamicas = tarjetasDinamicas + `
-    <article class="card">
-      <div class="imagenCh"> <img src="${gatos[i].img}"> </div>
-      <div class="textoCh"> 
-      <h4>${gatos[i].name}</h4>
-      <p class="parrCh">${gatos[i].shortDesc}</p>
-      <button id="info">Ver más</button>
-      </div>
-    </article>
 
-    <div id="infoModal" class="modal nomostrar">
-      <div class="imagenGR"> <img src="${gatos[i].img}"> </div>
-        <div class="modalcontent">
-          <h4 id="nombreGr">${gatos[i].name}</h4>
-          <p class="parrGr">${gatos[i].longDesc}</p>
-          <button id="cerrarModal">Cerrar</button>
-        </div>
-    </div>
-    `
-};
-
-cards.innerHTML = tarjetasDinamicas;
-
-
-const modal = document.querySelectorAll("#infoModal");
-
-const botonAbrirModal = document.querySelectorAll("#info");
-const botonCerrarModal = document.querySelectorAll("#cerrarModal");
-
-for (let i = 0; i < modal.length; i++) {
-  botonAbrirModal[i].onclick = () => {
-    modal[i].classList.remove("nomostrar")
-  }
-
-  botonCerrarModal[i].onclick = () => {
-    modal[i].classList.add("nomostrar")
-  }
-
-};
 
 
 forms = document.querySelector('form');
@@ -108,7 +66,13 @@ forms.onsubmit = e => {
     }
   };
 
-  console.log(pelajeElegido);
+     
+
+  const arrayPorPelaje = gatos.filter(gato => gato.pelaje.includes(...pelajeElegido));
+  console.log("dentro del filter de pelaje");
+  console.log(arrayPorPelaje);
+
+  
 
   if (!pelajeElegido.length) {
     alert(`Por favor seleccioná una opción`)
@@ -131,107 +95,89 @@ forms.onsubmit = e => {
 
   console.log(`El sexo elegido es ${sexoElegido}`);
 
+  const arrayPorPelajeySexo = arrayPorPelaje.filter(gato => gato.sexo.includes(sexoElegido));
+  console.log("dentro de filtro pelaje y sexo");
+  console.log(arrayPorPelajeySexo);
+
+  // const pelajeString = pelajeElegido.map (pelaje => {
+  //   return pelaje.toString();
+  // });
+  // console.log("pelaje en string");
+  // console.log(pelajeString);
+
+  // const gatoPelaje = gatos.filter(gato => { 
+  //   if (gato.pelaje.includes(pelajeString)) {
+  //     return gato;
+    
+  // }});
+  // console.log("dentro de gatoPelaje");
+  
+  // console.log(gatoPelaje);
+
   // ----------- muestra el nombre de usuario ingresado
   const nombreEscrito = document.getElementById("username");
   console.log(`El nombre del usuario es ${nombreEscrito.value}`);
 
   // ----------- muestra el teléfono ingresado
   const telefonoeEscrito = document.getElementById("telefono");
-  console.log(`El nombre del usuario es ${telefonoeEscrito.value}`);
+  console.log(`El teléfono del usuario es ${telefonoeEscrito.value}`);
 
 
 
 
 // ----------- filtra por pelaje
-
-cards.innerHTML = '';
-
-tarjetasDinamicas = '';
-// -----------
-// pelaje = []
-
-// function pelajeElegido(nuevoPelaje) {
-//   return nuevoPelaje === [i];
-// }
-
-// function filtroPelaje() {
-//   document.querySelector(".containerTarjetas").innerHTML = pelaje.find(pelajeElegido);
-// }
-// https://www.w3schools.com/jsref/jsref_find.asp 
-
-// --------------
-
-// let filtroPelaje = gatos.pelaje.filter(pelajeActual => pelajeActual === pelajeElegido);
-// tarjetasDinamicas.push(pelajeActual)
-
-// for (let i = 0; i < gatos.length; i++) {
-//   var pelajeActual = pelaje[i];
-//   if (pelajeActual === pelajeElegido) {
-//     filtroPelaje.push(pelajeActual)
-//   }
-  // --------------
-
-  let filtroPelaje = gatos.filter(gato => gatos.pelaje === pelajeElegido)
-  tarjetasDinamicas.push(filtroPelaje)
-  console.log(filtroPelaje)
-}
-
-// for (let i = 0; i < gatos.length; i++) {
-//   if (gatos[i].pelaje === pelajeElegido) {
-//     tarjetasDinamicas += `
-//     <article class="card">
-//       <div class="imagenCh"> <img src="${gatos[i].img}"> </div>
-//       <div class="textoCh"> 
-//       <h4>${gatos[i].name}</h4>
-//       <p class="parrCh">${gatos[i].shortDesc}</p>
-//       <button id="info">Ver más</button>
-//       </div>
-//     </article>
-//     `
-//   }
-
-// }
-
-// ----------- filtra por sexo
+const cards = document.querySelector(".containerTarjetas");
 
 cards.innerHTML = '';
 
 tarjetasDinamicas = '';
 
-for (let i = 0; i < gatos.length; i++) {
-  if (gatos[i].sexo === sexoElegido || sexoElegido === "indif") {
-    console.log("estoy dentro del if")
+
+
+
+
+
+const gatosImpresos = arrayPorPelajeySexo.forEach (gato => {
+
     tarjetasDinamicas += `
-    <article class="card">
-      <div class="imagenCh"> <img src="${gatos[i].img}"> </div>
-      <div class="textoCh"> 
-      <h4>${gatos[i].name}</h4>
-      <p class="parrCh">${gatos[i].shortDesc}</p>
-      <button id="info">Ver más</button>
-      </div>
-    </article>
-    `
+     <article class="card">
+       <div class="imagenCh"> <img src="${gato.img}"> </div>
+       <div class="textoCh"> 
+       <h4>${gato.name}</h4>
+       <p class="parrCh">${gato.shortDesc}</p>
+       <button id="info">Ver más</button>
+       </div>
+     </article>
+
+     <div id="infoModal" class="modal nomostrar">
+      <div class="imagenGR"> <img src="${gato.img}"> </div>
+         <div class="modalcontent">
+           <h4 id="nombreGr">${gato.name}</h4>
+           <p class="parrGr">${gato.longDesc}</p>
+           <button id="cerrarModal">Cerrar</button>
+         </div>
+     </div>
+     `
+   });
+
+   cards.innerHTML = tarjetasDinamicas;
+
+
+
+const modal = document.querySelectorAll("#infoModal");
+
+const botonAbrirModal = document.querySelectorAll("#info");
+const botonCerrarModal = document.querySelectorAll("#cerrarModal");
+
+for (let i = 0; i < modal.length; i++) {
+  botonAbrirModal[i].onclick = () => {
+    modal[i].classList.remove("nomostrar")
   }
 
+  botonCerrarModal[i].onclick = () => {
+    modal[i].classList.add("nomostrar")
+  }
+
+};
+
 }
-
-cards.innerHTML = tarjetasDinamicas;
-
-// function agregarTarjetas() {
-//   `
-//     <article class="card">
-//       <div class="imagenCh"> <img src="${gatos[i].img}"> </div>
-//       <div class="textoCh"> 
-//       <h4>${gatos[i].name}</h4>
-//       <p class="parrCh">${gatos[i].shortDesc}</p>
-//       <button id="info">Ver más</button>
-//       </div>
-//     </article>
-//     `
-// }
-
-
-
-
-
-
